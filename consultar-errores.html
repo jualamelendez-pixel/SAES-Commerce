@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar reportes | SAES Commerce</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="img/logo saes.jpeg" alt="Logo de SAES">
+                <h2>SAES Commerce</h2>
+            </div>
+
+            <nav class="menu">
+                <a href="inicio.html">▦ Panel principal</a>
+                <a href="productos.html">▣ Catálogo de productos</a>
+                <a href="pedidos.html">▤ Gestión de pedidos</a>
+                <a href="inventario.html">▥ Inventario</a>
+                <a href="despachos.html">⇧ Despachos</a>
+                <a href="errores.html">⚠ Reportar errores</a>
+                <a href="consultar-errores.html" class="activo">▤ Consultar reportes</a>
+            </nav>
+
+            <a href="index.html" class="cerrar-sesion">↩ Cerrar sesión</a>
+        </aside>
+
+        <main class="contenido">
+
+            <header class="encabezado">
+                <div>
+                    <h1>Reportes de errores</h1>
+                    <p>Consulta los problemas registrados en el sistema.</p>
+                </div>
+                <span class="estado-sistema">● Sistema activo</span>
+            </header>
+
+            <section class="bienvenida">
+                <span class="etiqueta">SOPORTE DEL SISTEMA</span>
+                <h2>Historial de reportes</h2>
+                <p>
+                    Revisa la información de los errores registrados
+                    por los usuarios de SAES Commerce.
+                </p>
+            </section>
+
+            <section class="tabla-seccion">
+                <div class="titulo-seccion">
+                    <h2>Reportes registrados</h2>
+                    <p>Los registros se consultan desde el almacenamiento local de este navegador.</p>
+                </div>
+
+                <div class="tabla-contenedor">
+                    <table class="tabla-pedidos">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Usuario</th>
+                                <th>Módulo</th>
+                                <th>Prioridad</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listaReportes">
+                        </tbody>
+                    </table>
+                </div>
+
+                <p id="mensajeReportes" class="mensaje-formulario"></p>
+
+                <button type="button" id="actualizarReportes" class="boton-principal">Actualizar reportes</button>
+            </section>
+
+            <footer class="pie-pagina">
+                SAES Commerce © 2026 | Consulta de reportes
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="consultar-errores.js"></script>
+</body>
+</html>

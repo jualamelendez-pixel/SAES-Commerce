@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAES Commerce | Inventario</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="img/logo saes.jpeg" alt="Logo de SAES">
+                <h2>SAES Commerce</h2>
+            </div>
+
+            <nav class="menu">
+                <a href="inicio.html">▦ Panel principal</a>
+                <a href="productos.html">▣ Catálogo de productos</a>
+                <a href="pedidos.html">▤ Gestión de pedidos</a>
+                <a href="inventario.html" class="activo">▥ Inventario</a>
+                <a href="despachos.html">⇧ Despachos</a>
+<a href="errores.html">⚠ Reportar errores</a>
+            </nav>
+
+            <a href="index.html" class="cerrar-sesion">↩ Cerrar sesión</a>
+        </aside>
+
+        <main class="contenido">
+
+            <header class="encabezado">
+                <div>
+                    <p class="etiqueta">CONTROL DE EXISTENCIAS</p>
+                    <h1>Inventario</h1>
+                    <p class="subtitulo">
+                        Consulta y controla las existencias de productos.
+                    </p>
+                </div>
+
+                <div class="estado-sistema">
+                    <span class="punto"></span>
+                    Sistema activo
+                </div>
+            </header>
+
+            <section class="bienvenida">
+                <div>
+                    <p class="etiqueta">GESTIÓN DE ALMACÉN</p>
+                    <h2>Control de inventario</h2>
+                    <p>
+                        Consulta las cantidades registradas y
+                        detecta productos que requieren revisión.
+                    </p>
+                </div>
+                <div class="icono-bienvenida">▥</div>
+            </section>
+
+            <section class="indicadores">
+                <article class="tarjeta">
+                    <div class="tarjeta-icono">▣</div>
+                    <p>Productos registrados</p>
+                    <h3 id="totalInventario">3</h3>
+                    <span>Registros de ejemplo</span>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="tarjeta-icono">✓</div>
+                    <p>Existencias suficientes</p>
+                    <h3>1</h3>
+                    <span>Según datos de demostración</span>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="tarjeta-icono">⚠</div>
+                    <p>Existencias bajas</p>
+                    <h3>2</h3>
+                    <span>Requieren revisión</span>
+                </article>
+            </section>
+
+            <section class="tabla-seccion">
+                <div class="titulo-seccion">
+                    <h2>Existencias de productos</h2>
+                    <p>Busca por nombre o referencia.</p>
+                </div>
+
+                <input
+                    type="search"
+                    id="buscarInventario"
+                    class="buscador-inventario"
+                    placeholder="Buscar producto o referencia..."
+                    aria-label="Buscar en el inventario"
+                >
+
+                <div class="tabla-contenedor">
+                    <table class="tabla-pedidos">
+                        <thead>
+                            <tr>
+                                <th>Referencia</th>
+                                <th>Producto</th>
+                                <th>Existencias</th>
+                                <th>Stock mínimo</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tablaInventario">
+                            <tr>
+                                <td>BP-001</td>
+                                <td>Bolsa plástica</td>
+                                <td>500</td>
+                                <td>100</td>
+                                <td>
+                                    <span class="estado-pedido entregado">
+                                        Suficiente
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>BR-002</td>
+                                <td>Bolsa de alta resistencia</td>
+                                <td>40</td>
+                                <td>100</td>
+                                <td>
+                                    <span class="estado-pedido pendiente">
+                                        Stock bajo
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>BE-003</td>
+                                <td>Bolsa para embalaje</td>
+                                <td>70</td>
+                                <td>100</td>
+                                <td>
+                                    <span class="estado-pedido pendiente">
+                                        Stock bajo
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p id="sinInventario" class="sin-resultados" hidden>
+                    No se encontraron productos.
+                </p>
+            </section>
+
+            <footer class="pie-pagina">
+                SAES Commerce · Control de inventario
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="inventario.js"></script>
+
+</body>
+</html>

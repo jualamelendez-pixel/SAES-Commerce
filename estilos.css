@@ -1,0 +1,217 @@
+```css
+/* CONFIGURACIÓN GENERAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #eaf2ff;
+    background: linear-gradient(135deg, #071426, #102c50, #071426);
+    min-height: 100vh;
+}
+
+/* CONTENEDOR PRINCIPAL */
+/* CONTENEDOR PRINCIPAL */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* TARJETA DE INICIO DE SESIÓN */
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 28px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: #102844;
+    box-shadow: 0 0 30px rgba(0, 140, 255, 0.15);
+}
+/* LOGO ORIGINAL */
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.logo img {
+    width: 145px;
+    height: 110px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+/* NOMBRE DEL SISTEMA */
+.marca-commerce {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 24px;
+    padding: 9px 18px;
+    background: #123b63;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #2c8ee8;
+    border-radius: 8px;
+    box-shadow: 0 0 14px rgba(44, 142, 232, 0.2);
+}
+
+/* TÍTULO Y DESCRIPCIÓN */
+.login-card h1 {
+    color: #55b7ff;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #b8cce5;
+    margin-bottom: 26px;
+    line-height: 1.5;
+}
+
+/* FORMULARIO */
+.login-card form {
+    width: 100%;
+}
+
+.login-card label {
+    display: block;
+    margin: 15px 0 8px;
+    color: #eaf2ff;
+}
+
+.login-card input {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 15px;
+    background: #0a1b30;
+    color: #ffffff;
+    border: 1px solid #355b83;
+    border-radius: 9px;
+    outline: none;
+    font-size: 15px;
+}
+
+.login-card input:focus {
+    border-color: #55b7ff;
+    box-shadow: 0 0 10px rgba(85, 183, 255, 0.25);
+}
+
+/* BOTÓN DE INGRESO */
+.login-card button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    background: linear-gradient(90deg, #0866c6, #168cff);
+    color: #ffffff;
+    border: none;
+    border-radius: 9px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-card button:hover {
+    background: linear-gradient(90deg, #168cff, #55b7ff);
+    box-shadow: 0 0 18px rgba(85, 183, 255, 0.4);
+}
+
+/* MENSAJES Y PIE DE PÁGINA */
+#mensaje {
+    margin-top: 15px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.footer-text {
+    text-align: center;
+    color: #9db5d2;
+    font-size: 12px;
+    margin-top: 22px;
+}
+
+/* ADAPTACIÓN A CELULARES */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 15px;
+    }
+
+    .login-card {
+        padding: 25px 20px;
+    }
+
+    .login-card h1 {
+        font-size: 27px;
+    }
+
+    .logo img {
+        width: 125px;
+        height: 100px;
+    }
+}
+/* Efecto futurista para la tarjeta */
+.login-card 
+
+/* Color blanco para el ojo de mostrar contraseña */
+#loginForm input[type="password"]::-ms-reveal {
+    filter: invert(1);
+}
+
+/* Animación suave de entrada */
+.login-card {
+    animation: entradaSAES 0.8s ease-out;
+}
+
+@keyframes entradaSAES {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efecto futurista en el botón */
+#loginForm button[type="submit"] {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                filter 0.25s ease;
+}
+
+#loginForm button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px rgba(0, 140, 255, 0.65);
+    filter: brightness(1.15);
+}
+
+#loginForm button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+/* Accesibilidad: respetar la preferencia de movimiento */
+@media (prefers-reduced-motion: reduce) {
+    .login-card {
+        animation: none;
+    }
+
+    #loginForm button[type="submit"] {
+        transition: none;
+    }
+}

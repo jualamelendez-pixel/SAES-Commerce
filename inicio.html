@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAES Commerce | Panel principal</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="img/logo saes.jpeg" alt="Logo de SAES">
+                <h2>SAES Commerce</h2>
+            </div>
+
+            <nav class="menu">
+                <a href="inicio.html" class="activo">▦ Panel principal</a>
+                <<a href="productos.html">▣ Catálogo de productos</a>
+<a href="pedidos.html">▤ Gestión de pedidos</a>
+<a href="inventario.html">▥ Inventario</a>
+<a href="despachos.html">⇧ Despachos</a>
+<a href="errores.html">⚠ Reportar errores</a>
+            </nav>
+
+            <a href="index.html" class="cerrar-sesion">↩ Cerrar sesión</a>
+        </aside>
+
+        <main class="contenido">
+            <header class="encabezado">
+                <div>
+                    <p class="etiqueta">SISTEMA DE GESTIÓN</p>
+                    <h1>Panel principal</h1>
+                    <p class="subtitulo">
+                        Bienvenido a SAES Commerce
+                    </p>
+                </div>
+                <div class="estado-sistema">
+                    <span class="punto"></span>
+                    Sistema activo
+                </div>
+            </header>
+
+            <section class="bienvenida">
+                <div>
+                    <p class="etiqueta">CENTRO DE OPERACIONES</p>
+                    <h2>Todo tu negocio en un solo lugar</h2>
+                    <p>
+                        Consulta y organiza los procesos de pedidos,
+                        inventario y despachos.
+                    </p>
+                </div>
+                <div class="icono-bienvenida">⌘</div>
+            </section>
+
+            <section class="indicadores">
+                <article class="tarjeta">
+                    <div class="tarjeta-icono">▤</div>
+                    <p>Pedidos registrados</p>
+                    <h3>--</h3>
+                    <span>Información por configurar</span>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="tarjeta-icono">▣</div>
+                    <p>Productos en catálogo</p>
+                    <h3>--</h3>
+                    <span>Información por configurar</span>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="tarjeta-icono">⇧</div>
+                    <p>Despachos pendientes</p>
+                    <h3>--</h3>
+                    <span>Información por configurar</span>
+                </article>
+            </section>
+
+            <section class="modulos">
+                <div class="titulo-seccion">
+                    <div>
+                        <h2>Accesos rápidos</h2>
+                        <p>Selecciona el módulo que deseas consultar.</p>
+                    </div>
+                </div>
+
+                <div class="modulos-grid">
+                    <button class="modulo" data-seccion="productos">
+                        <span class="modulo-icono">▣</span>
+                        <strong>Productos</strong>
+                        <span>Consultar el catálogo</span>
+                        <span class="flecha">→</span>
+                    </button>
+
+                    <button class="modulo" data-seccion="pedidos">
+                        <span class="modulo-icono">▤</span>
+                        <strong>Pedidos</strong>
+                        <span>Gestionar las órdenes</span>
+                        <span class="flecha">→</span>
+                    </button>
+
+                    <button class="modulo" data-seccion="inventario">
+                        <span class="modulo-icono">▥</span>
+                        <strong>Inventario</strong>
+                        <span>Consultar existencias</span>
+                        <span class="flecha">→</span>
+                    </button>
+
+                    <button class="modulo" data-seccion="despachos">
+                        <span class="modulo-icono">⇧</span>
+                        <strong>Despachos</strong>
+                        <span>Organizar las entregas</span>
+                        <span class="flecha">→</span>
+                    </button>
+                </div>
+            </section>
+
+            <footer class="pie-pagina">
+                SAES Commerce · Gestión de pedidos e inventario
+            </footer>
+        </main>
+
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

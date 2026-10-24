@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar errores | SAES Commerce</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="img/logo saes.jpeg" alt="Logo de SAES">
+                <h2>SAES Commerce</h2>
+            </div>
+
+            <nav class="menu">
+                <a href="inicio.html">▦ Panel principal</a>
+                <a href="productos.html">▣ Catálogo de productos</a>
+                <a href="pedidos.html">▤ Gestión de pedidos</a>
+                <a href="inventario.html">▥ Inventario</a>
+                <a href="despachos.html">⇧ Despachos</a>
+                <a href="errores.html" class="activo">⚠ Reportar errores</a>
+                <a href="consultar-errores.html">▤ Consultar reportes</a>
+            </nav>
+
+            <a href="index.html" class="cerrar-sesion">↩ Cerrar sesión</a>
+        </aside>
+
+        <main class="contenido">
+
+            <header class="encabezado">
+                <div>
+                    <h1>Reporte de errores</h1>
+                    <p>Registra los problemas encontrados en el sistema.</p>
+                </div>
+                <span class="estado-sistema">● Sistema activo</span>
+            </header>
+
+            <section class="bienvenida">
+                <span class="etiqueta">SOPORTE DEL SISTEMA</span>
+                <h2>¿Encontraste algún problema?</h2>
+                <p>
+                    Completa el formulario con los detalles del error
+                    para facilitar su identificación y solución.
+                </p>
+            </section>
+
+            <section class="tarjeta-formulario">
+                <div class="titulo-seccion">
+                    <h2>Registrar un error</h2>
+                    <p>Los campos marcados con * son obligatorios.</p>
+                </div>
+
+                <form id="formularioError">
+
+                    <div class="campo-formulario">
+                        <label for="usuarioError">Nombre del usuario *</label>
+                        <input
+                            type="text"
+                            id="usuarioError"
+                            name="usuario"
+                            placeholder="Escribe tu nombre"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="moduloError">Módulo donde ocurre el error *</label>
+                        <select id="moduloError" name="modulo" required>
+                            <option value="">Selecciona un módulo</option>
+                            <option value="Inicio">Panel principal</option>
+                            <option value="Productos">Catálogo de productos</option>
+                            <option value="Pedidos">Gestión de pedidos</option>
+                            <option value="Inventario">Inventario</option>
+                            <option value="Despachos">Despachos</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="prioridadError">Prioridad *</label>
+                        <select id="prioridadError" name="prioridad" required>
+                            <option value="">Selecciona una prioridad</option>
+                            <option value="Baja">Baja</option>
+                            <option value="Media">Media</option>
+                            <option value="Alta">Alta</option>
+                            <option value="Crítica">Crítica</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="descripcionError">Descripción del problema *</label>
+                        <textarea
+                            id="descripcionError"
+                            name="descripcion"
+                            rows="5"
+                            placeholder="Describe qué ocurrió y qué estabas haciendo..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="fechaError">Fecha del reporte *</label>
+                        <input
+                            type="date"
+                            id="fechaError"
+                            name="fecha"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="boton-principal">
+                        Registrar reporte
+                    </button>
+
+                    <p id="mensajeError" class="mensaje-formulario" role="status"></p>
+
+                </form>
+            </section>
+
+            <footer class="pie-pagina">
+                SAES Commerce © 2026 | Soporte del sistema
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="errores.js"></script>
+</body>
+</html>

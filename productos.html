@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAES Commerce | Catálogo de productos</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="img/logo saes.jpeg" alt="Logo de SAES">
+                <h2>SAES Commerce</h2>
+            </div>
+
+            <nav class="menu">
+                <a href="inicio.html">▦ Panel principal</a>
+                <a href="productos.html" class="activo">▣ Catálogo de productos</a>
+                <a href="pedidos.html">▤ Gestión de pedidos</a>
+<a href="inventario.html">▥ Inventario</a>
+<a href="despachos.html">⇧ Despachos</a>
+<a href="errores.html">⚠ Reportar errores</a>
+            </nav>
+
+            <a href="index.html" class="cerrar-sesion">↩ Cerrar sesión</a>
+        </aside>
+
+        <main class="contenido">
+
+            <header class="encabezado">
+                <div>
+                    <p class="etiqueta">GESTIÓN COMERCIAL</p>
+                    <h1>Catálogo de productos</h1>
+                    <p class="subtitulo">
+                        Consulta los productos de SAES Empaque y Embalaje.
+                    </p>
+                </div>
+
+                <div class="estado-sistema">
+                    <span class="punto"></span>
+                    Sistema activo
+                </div>
+            </header>
+
+            <section class="bienvenida">
+                <div>
+                    <p class="etiqueta">CATÁLOGO SAES</p>
+                    <h2>Productos de empaque y embalaje</h2>
+                    <p>
+                        Organiza y consulta los productos disponibles
+                        para la gestión de pedidos.
+                    </p>
+                </div>
+                <div class="icono-bienvenida">▣</div>
+            </section>
+
+            <section class="catalogo-herramientas">
+                <div>
+                    <h2>Productos disponibles</h2>
+                    <p>Busca un producto por su nombre.</p>
+                </div>
+
+                <input
+                    type="search"
+                    id="buscarProducto"
+                    placeholder="Buscar producto..."
+                    aria-label="Buscar producto"
+                >
+            </section>
+
+            <section class="productos-grid" id="listaProductos">
+
+                <article class="producto-card">
+                    <div class="producto-imagen">▤</div>
+                    <span class="producto-categoria">Empaque</span>
+                    <h3>Bolsa plástica</h3>
+                    <p>
+                        Producto para empaque y almacenamiento
+                        de mercancías.
+                    </p>
+                    <div class="producto-detalle">
+                        <span>Referencia: BP-001</span>
+                        <span class="disponibilidad">Por verificar</span>
+                    </div>
+                </article>
+
+                <article class="producto-card">
+                    <div class="producto-imagen">▤</div>
+                    <span class="producto-categoria">Empaque</span>
+                    <h3>Bolsa de alta resistencia</h3>
+                    <p>
+                        Bolsa para el manejo y transporte
+                        de diferentes productos.
+                    </p>
+                    <div class="producto-detalle">
+                        <span>Referencia: BR-002</span>
+                        <span class="disponibilidad">Por verificar</span>
+                    </div>
+                </article>
+
+                <article class="producto-card">
+                    <div class="producto-imagen">▤</div>
+                    <span class="producto-categoria">Embalaje</span>
+                    <h3>Bolsa para embalaje</h3>
+                    <p>
+                        Alternativa para proteger productos
+                        durante su almacenamiento y despacho.
+                    </p>
+                    <div class="producto-detalle">
+                        <span>Referencia: BE-003</span>
+                        <span class="disponibilidad">Por verificar</span>
+                    </div>
+                </article>
+
+            </section>
+
+            <p id="sinResultados" class="sin-resultados" hidden>
+                No se encontraron productos con ese nombre.
+            </p>
+
+            <footer class="pie-pagina">
+                SAES Commerce · Catálogo de productos
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="productos.js"></script>
+
+</body>
+</html>

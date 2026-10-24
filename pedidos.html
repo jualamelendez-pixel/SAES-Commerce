@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de pedidos | SAES Commerce</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="img/logo saes.jpeg" alt="Logo de SAES">
+                <h2>SAES Commerce</h2>
+            </div>
+
+            <nav class="menu">
+                <a href="inicio.html">▦ Panel principal</a>
+                <a href="productos.html">▣ Catálogo de productos</a>
+                <a href="pedidos.html" class="activo">▤ Gestión de pedidos</a>
+                <a href="inventario.html">▥ Inventario</a>
+                <a href="despachos.html">⇧ Despachos</a>
+                <a href="errores.html">⚠ Reportar errores</a>
+            </nav>
+
+            <a href="index.html" class="cerrar-sesion">↩ Cerrar sesión</a>
+        </aside>
+
+        <main class="contenido">
+
+            <header class="encabezado">
+                <div>
+                    <h1>Gestión de pedidos</h1>
+                    <p>Consulta y administra los pedidos de SAES Empaque y Embalaje.</p>
+                </div>
+                <span class="estado-sistema">● Sistema activo</span>
+            </header>
+
+            <section class="bienvenida">
+                <span class="etiqueta">CONTROL COMERCIAL Y LOGÍSTICO</span>
+                <h2>Administración de pedidos</h2>
+                <p>
+                    Consulta los pedidos registrados y actualiza su estado
+                    para facilitar el seguimiento de cada solicitud.
+                </p>
+            </section>
+
+            <section class="indicadores">
+
+                <article class="tarjeta-indicador">
+                    <span>Total de pedidos</span>
+                    <h3 id="totalPedidos">3</h3>
+                    <p>Pedidos registrados</p>
+                </article>
+
+                <article class="tarjeta-indicador">
+                    <span>Pedidos en proceso</span>
+                    <h3 id="pedidosProceso">1</h3>
+                    <p>En gestión operativa</p>
+                </article>
+
+                <article class="tarjeta-indicador">
+                    <span>Pedidos entregados</span>
+                    <h3 id="pedidosEntregados">1</h3>
+                    <p>Entregas completadas</p>
+                </article>
+
+            </section>
+
+            <section class="tabla-seccion">
+
+                <div class="titulo-seccion">
+                    <h2>Listado de pedidos</h2>
+                    <p>
+                        Utiliza el buscador para localizar un pedido
+                        y el selector para actualizar su estado.
+                    </p>
+                </div>
+
+                <input
+                    type="search"
+                    id="buscarPedido"
+                    class="buscador-inventario"
+                    placeholder="Buscar por pedido, cliente o producto..."
+                    aria-label="Buscar pedidos"
+                >
+
+                <div class="tabla-contenedor">
+                    <table class="tabla-pedidos">
+                        <thead>
+                            <tr>
+                                <th>N.º pedido</th>
+                                <th>Cliente</th>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Fecha</th>
+                                <th>Estado del pedido</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tablaPedidos">
+
+                            <tr>
+                                <td>PED-001</td>
+                                <td>Cliente de ejemplo A</td>
+                                <td>Bolsa plástica</td>
+                                <td>500</td>
+                                <td>19/10/2026</td>
+                                <td>
+                                    <select class="selector-estado" aria-label="Estado del pedido PED-001">
+                                        <option value="Registrado" selected>Registrado</option>
+                                        <option value="Aprobado">Aprobado</option>
+                                        <option value="En producción">En producción</option>
+                                        <option value="Listo para despacho">Listo para despacho</option>
+                                        <option value="Despachado">Despachado</option>
+                                        <option value="Entregado">Entregado</option>
+                                        <option value="Cancelado">Cancelado</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>PED-002</td>
+                                <td>Cliente de ejemplo B</td>
+                                <td>Bolsa de alta resistencia</td>
+                                <td>300</td>
+                                <td>19/10/2026</td>
+                                <td>
+                                    <select class="selector-estado" aria-label="Estado del pedido PED-002">
+                                        <option value="Registrado">Registrado</option>
+                                        <option value="Aprobado">Aprobado</option>
+                                        <option value="En producción" selected>En producción</option>
+                                        <option value="Listo para despacho">Listo para despacho</option>
+                                        <option value="Despachado">Despachado</option>
+                                        <option value="Entregado">Entregado</option>
+                                        <option value="Cancelado">Cancelado</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>PED-003</td>
+                                <td>Cliente de ejemplo C</td>
+                                <td>Bolsa para embalaje</td>
+                                <td>200</td>
+                                <td>19/10/2026</td>
+                                <td>
+                                    <select class="selector-estado" aria-label="Estado del pedido PED-003">
+                                        <option value="Registrado">Registrado</option>
+                                        <option value="Aprobado">Aprobado</option>
+                                        <option value="En producción">En producción</option>
+                                        <option value="Listo para despacho">Listo para despacho</option>
+                                        <option value="Despachado">Despachado</option>
+                                        <option value="Entregado" selected>Entregado</option>
+                                        <option value="Cancelado">Cancelado</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <p id="sinPedidos" class="sin-resultados" hidden>
+                    No se encontraron pedidos.
+                </p>
+
+                <p id="mensajePedido" class="mensaje-formulario" role="status"></p>
+
+            </section>
+
+            <footer class="pie-pagina">
+                SAES Commerce © 2026 | Gestión de pedidos
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="pedidos.js"></script>
+</body>
+</html>

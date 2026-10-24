@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despachos | SAES Commerce</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="img/logo saes.jpeg" alt="Logo de SAES">
+                <h2>SAES Commerce</h2>
+            </div>
+
+            <nav class="menu">
+                <a href="inicio.html">▦ Panel principal</a>
+                <a href="productos.html">▣ Catálogo de productos</a>
+                <a href="pedidos.html">▤ Gestión de pedidos</a>
+                <a href="inventario.html">▥ Inventario</a>
+                <a href="despachos.html" class="activo">⇧ Despachos</a>
+                <a href="errores.html">⚠ Reportar errores</a>
+
+            <a href="index.html" class="cerrar-sesion">↩ Cerrar sesión</a>
+        </aside>
+
+        <main class="contenido">
+
+            <header class="encabezado">
+                <div>
+                    <h1>Gestión de despachos</h1>
+                    <p>Control de preparación y entrega de pedidos.</p>
+                </div>
+                <span class="estado-sistema">● Sistema activo</span>
+            </header>
+
+            <section class="bienvenida">
+                <span class="etiqueta">LOGÍSTICA Y DISTRIBUCIÓN</span>
+                <h2>Control de despachos</h2>
+                <p>
+                    Consulta los pedidos preparados para su entrega y verifica
+                    el estado de cada despacho.
+                </p>
+            </section>
+
+            <section class="indicadores">
+                <article class="tarjeta-indicador">
+                    <span>Despachos registrados</span>
+                    <h3>3</h3>
+                    <p>Registros de ejemplo</p>
+                </article>
+
+                <article class="tarjeta-indicador">
+                    <span>Pendientes de entrega</span>
+                    <h3>1</h3>
+                    <p>Por preparar o despachar</p>
+                </article>
+
+                <article class="tarjeta-indicador">
+                    <span>Entregas completadas</span>
+                    <h3>1</h3>
+                    <p>Pedidos entregados</p>
+                </article>
+            </section>
+
+            <section class="tabla-seccion">
+                <div class="titulo-seccion">
+                    <h2>Listado de despachos</h2>
+                    <p>Los siguientes registros son ficticios y sirven como demostración.</p>
+                </div>
+
+                <div class="tabla-contenedor">
+                    <table class="tabla-pedidos">
+                        <thead>
+                            <tr>
+                                <th>N.º despacho</th>
+                                <th>N.º pedido</th>
+                                <th>Cliente</th>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Fecha</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>DES-001</td>
+                                <td>PED-001</td>
+                                <td>Cliente de ejemplo A</td>
+                                <td>Bolsa plástica</td>
+                                <td>500</td>
+                                <td>19/10/2026</td>
+                                <td>
+                                    <span class="estado-pedido pendiente">Pendiente</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>DES-002</td>
+                                <td>PED-002</td>
+                                <td>Cliente de ejemplo B</td>
+                                <td>Bolsa de alta resistencia</td>
+                                <td>300</td>
+                                <td>19/10/2026</td>
+                                <td>
+                                    <span class="estado-pedido proceso">En preparación</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>DES-003</td>
+                                <td>PED-003</td>
+                                <td>Cliente de ejemplo C</td>
+                                <td>Bolsa para embalaje</td>
+                                <td>200</td>
+                                <td>19/10/2026</td>
+                                <td>
+                                    <span class="estado-pedido entregado">Entregado</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <footer class="pie-pagina">
+                SAES Commerce © 2026 | Gestión de despachos
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
